@@ -1,25 +1,22 @@
 import "./App.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./redux/index";
-import { Dashboard } from "./Components/Dashboard/index";
-import { MainHeaderBackground } from "./Components/Background";
-import { MainHeader } from "./Components/MainHeader";
+import { ErrorFallback } from "./Components/ErrorBoundary/index";
+import { ErrorBoundary } from "react-error-boundary";
+
+import AppRoutes from "./Routes/AppRoutes/index";
 
 function App() {
   return (
     <div className="min-h-screen  bg-blue-100 text-white font-serif">
-      <MainHeaderBackground />
-      <MainHeader />
-      <div className="relative mt-40">
-        <Provider store={store}>
+      <Provider store={store}>
+        <ErrorBoundary FallbackComponent={ErrorFallback}>
           <Router>
-            <Routes>
-              <Route path="/" element={<Dashboard />} />
-            </Routes>
+            <AppRoutes />
           </Router>
-        </Provider>
-      </div>
+        </ErrorBoundary>
+      </Provider>
     </div>
   );
 }

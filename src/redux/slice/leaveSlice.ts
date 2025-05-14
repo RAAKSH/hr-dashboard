@@ -2,12 +2,12 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 
 //calling the BE api
-export const fetchEmployees = createAsyncThunk(
-  "employees/fetchEmployees",
+export const fetchLeaves = createAsyncThunk(
+  "leaves/fetchLeaves",
   async (companyId: number, { rejectWithValue }) => {
     try {
       const response = await fetch(
-        `http://localhost:3000/api/${companyId}/employees`,
+        `http://localhost:3000/api/${companyId}/leaves`,
         {
           method: "GET",
           headers: {
@@ -27,23 +27,23 @@ export const fetchEmployees = createAsyncThunk(
   }
 );
 
-const employeeSlice = createSlice({
-  name: "employees",
+const leavesSlice = createSlice({
+  name: "leaves",
   initialState: { data: [], loading: false },
   reducers: {},
   extraReducers: (builder) => {   // extra reducers to handle the status of the api call
     builder
-      .addCase(fetchEmployees.pending, (state) => {
+      .addCase(fetchLeaves.pending, (state) => {
         state.loading = true;
       })
-      .addCase(fetchEmployees.fulfilled, (state, action) => {
+      .addCase(fetchLeaves.fulfilled, (state, action) => {
         state.loading = false;
         state.data = action.payload;
       })
-      .addCase(fetchEmployees.rejected, (state) => {
+      .addCase(fetchLeaves.rejected, (state) => {
         state.loading = false;
       });
   },
 });
 
-export default employeeSlice.reducer;
+export default leavesSlice.reducer;
