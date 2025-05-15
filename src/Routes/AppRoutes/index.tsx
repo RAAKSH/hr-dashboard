@@ -12,15 +12,15 @@ const AppRoutes = () => {
   const isLogin = location.pathname === "/login";
 
   return (
-    <div className="min-h-screen bg-blue-100 text-white font-serif">
+    <div className="text-white font-serif">
       {!isLogin && (
-        <>
+        <div className="relative h-[100px]">
           <MainHeaderBackground />
           <MainHeader />
-        </>
+        </div>
       )}
 
-      <main className={`${!isLogin ? "pt-40" : ""} px-4`}>
+      <main className={`${!isLogin ? "pt-40 relative z-10" : ""} px-4`}>
         <Routes>
           <Route
             path="/"

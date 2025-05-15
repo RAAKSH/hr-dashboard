@@ -25,7 +25,8 @@ const Login = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto  bg-white shadow-md rounded-xl p-6 space-y-6 text-gray-800">
+    <div className="flex items-center justify-center min-h-screen bg-blue-100">
+    <div className="w-100 mx-auto   bg-white shadow-md rounded-xl p-6  text-gray-800">
       <h2 className="text-2xl font-bold text-center">Login</h2>
 
       <div className="flex justify-center space-x-4">
@@ -82,6 +83,7 @@ const Login = () => {
           Login as {role.charAt(0).toUpperCase() + role.slice(1)}
         </button>
       </div>
+    </div>
     </div>
   );
 };

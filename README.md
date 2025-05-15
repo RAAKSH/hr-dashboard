@@ -1,12 +1,55 @@
-# React + Vite
+# Setup instructions
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Steps to set up frontend
 
-Currently, two official plugins are available:
+1 to create react app with Vite 
+npm create vite@latest  <project name> --template react
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2 cd project name
 
-## Expanding the ESLint configuration
+3 npm install
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+4 npm run dev
+
+Steps to setup BE
+
+1 . cd  src > cd mockServer
+
+2  node server.js // make sure BE is running on port 3000
+
+
+# Architectural Explanation
+
+HR Dashboard project is fosused is on modularity. It has seperate folders for 
+1.Components > focused is on all the components of the project includes login , header, background, Dashboarde etc
+2.MockServer > contains code for BE mainly api's
+3.Routes > contains routes for the application and protected routes
+4.utils > contains constants file and mock Data(mocked service files )
+
+
+# Application Architecture Overview
+
+1.Authentication & Access Control
+The application features a secure login system with role-based access for Admin and Employee users. All application routes are protected — unauthenticated users are restricted from accessing any part of the system.
+
+2.Company Selection & Employee Management
+After a successful login, users are prompted to select a company from a dropdown menu. Upon selection, a dynamic employee list is displayed using infinite scrolling for seamless navigation.
+
+3.Dashboard Interface
+The dashboard utilizes a tabbed view layout, allowing users to switch between key sections of the application efficiently.
+
+4.Leave Management
+The Leaves section provides a visual overview using a pie chart, giving users a summary of leave statistics.
+
+5.Announcements Module
+The Announcements section presents data in a table format with infinite scrolling, enabling users to browse updates without pagination.
+
+
+
+
+
+
+
+
+
+

@@ -22,7 +22,7 @@ export const Dashboard = () => {
   }, [selectedCompanyId]);
 
   return (
-    <div className="container mx-auto px-4 py-6 space-y-6">
+    <div className="mx-auto px-4 py-6 space-y-6">
       <div className="flex">
         <CompanySwitcher setSelectedCompanyId={setSelectedCompanyId} />
       </div>

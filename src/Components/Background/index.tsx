@@ -6,17 +6,17 @@ export const MainHeaderBackground = () => {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
-        className="absolute top-0 left-0 w-full  z-0"
+        className="absolute top-0 left-0 w-full -z-0"
       >
         <defs>
           <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
             <stop
               offset="0%"
-              style={{ stopColor: "#f9a8d4", stopOpacity: "1" }} 
+              style={{ stopColor: "#f9a8d4", stopOpacity: "1" }}
             />
             <stop
               offset="100%"
-              style={{ stopColor: "#60a5fa", stopOpacity: "1" }} 
+              style={{ stopColor: "#60a5fa", stopOpacity: "1" }}
             />
           </linearGradient>
         </defs>

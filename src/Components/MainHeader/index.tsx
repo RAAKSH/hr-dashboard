@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import hr from "../../assets/hr.jpg";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import logout from "../../redux/slice/authSlice";
 
 export const MainHeader = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const role = useSelector((state: any) => state.auth.role);
+
+  const handleLogout = () => {
+    dispatch(logout());
+    navigate("/login");
+  };
   return (
-    <div className="ml-40 top-0 left-0 flex items-center space-x-4 relative ">
+    <div className="ml-40 top-0 left-0 flex items-center space-x-4 relative">
       <img
         src={hr}
         alt="Sample Image"
@@ -13,8 +26,26 @@ export const MainHeader = () => {
         HR Dashboard
       </h1>
 
-      <nav className="flex items-center space-x-6 justify-between ml-auto mr-30 font-serif">
-        <ul className="flex  space-x-6 text-md"></ul>
+      <nav className="flex items-center justify-end ml-auto mr-10 relative">
+        <div className="relative   inline-block text-left">
+          <button
+            onClick={() => setDropdownOpen(!dropdownOpen)}
+            className="bg-blue-700 text-white px-4 py-2 font-medium capitalize rounded-full"
+          >
+            {role}
+          </button>
+
+          {dropdownOpen && (
+            <div className="absolute right-0 mt-2 w-40 bg-white rounded-md shadow-lg z-10">
+              <button
+                onClick={handleLogout}
+                className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+              >
+                Logout
+              </button>
+            </div>
+          )}
+        </div>
       </nav>
     </div>
   );
