@@ -1,5 +1,7 @@
 import React from "react";
 
+//  Header  Background Component
+
 export const MainHeaderBackground = () => {
   return (
     <div>

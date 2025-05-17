@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../redux";
 
-
+//Company dropdown  Component
 export const CompanySwitcher = ({ setSelectedCompanyId }: { setSelectedCompanyId: (id: number) => void }) => {
   // const dispatch = useDispatch();
   const selectedCompanyId = useSelector((state: RootState) => state.company.selectedCompanyId);

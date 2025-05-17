@@ -4,6 +4,8 @@ import { RootState } from "../../../redux";
 import { fetchLeaves } from "../../../redux/slice/leaveSlice";
 import { Cell, Legend, Pie, PieChart, Tooltip } from "recharts";
 
+//Leave Summary Component
+
 const Leave = () => {
   const dispatch = useDispatch();
   const { data, loading } = useSelector((state: RootState) => state.leaves);

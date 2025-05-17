@@ -3,6 +3,8 @@ import { Navigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { RootState } from "../../redux/index";
 
+// Protected Routes based on Roles Component
+
 interface Props {
   children: React.ReactNode;
   allowedRoles?: ("admin" | "employee")[];

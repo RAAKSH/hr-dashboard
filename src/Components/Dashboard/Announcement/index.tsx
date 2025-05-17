@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../redux";
 import { fetchAnnouncementData } from "../../../redux/slice/annoucementSlice";
 
+
+// Announcement Component
 const Announcements = () => {
   const dispatch = useDispatch();
   const { data, loading } = useSelector(

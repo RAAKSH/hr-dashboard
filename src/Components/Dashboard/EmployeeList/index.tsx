@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../redux";
 import { fetchEmployees } from "../../../redux/slice/employeeSlice";
 
+//Employee List Component
  const EmployeeList = () => {
   const dispatch = useDispatch();
   const { data, loading } = useSelector((state: RootState) => state.employees);

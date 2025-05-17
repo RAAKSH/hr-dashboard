@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { logout } from "../../redux/slice/authSlice";
 
+//Header  Component
+
 export const MainHeader = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();

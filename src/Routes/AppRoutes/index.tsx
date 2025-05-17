@@ -1,4 +1,4 @@
-// AppRoutes.jsx
+
 import React from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { Dashboard } from "../../Components/Dashboard/index";
@@ -6,6 +6,8 @@ import { MainHeaderBackground } from "../../Components/Background";
 import { MainHeader } from "../../Components/MainHeader";
 import ProtectedRoute from "../ProtectedRoute/index";
 import Login from "../../Components/Login";
+
+// Routes Component
 
 const AppRoutes = () => {
   const location = useLocation();
