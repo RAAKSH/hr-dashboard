@@ -45,6 +45,21 @@ The Leaves section provides a visual overview using a pie chart, giving users a 
 The Announcements section presents data in a table format with infinite scrolling, enabling users to browse updates without pagination.
 
 
+<img width="1280" alt="Screenshot 2025-05-17 at 4 05 38 PM" src="https://github.com/user-attachments/assets/4b2e7cb2-a622-4d1b-bd8a-cc6f2c958750" />
+
+
+<img width="1280" alt="Screenshot 2025-05-17 at 4 05 58 PM" src="https://github.com/user-attachments/assets/b1aef9e3-40d4-40f2-9e65-725687570fcc" />
+
+
+<img width="1280" alt="Screenshot 2025-05-17 at 4 06 02 PM" src="https://github.com/user-attachments/assets/150da8d9-70de-4ac7-b9bf-fa14abdd9f93" />
+
+
+<img width="1280" alt="Screenshot 2025-05-17 at 4 06 07 PM" src="https://github.com/user-attachments/assets/8a71e72a-f924-419b-aa11-3be6ea59ca07" />
+
+
+
+
+
 
 
 
