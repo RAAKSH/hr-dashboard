@@ -1,13 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import hr from "../../assets/hr.jpg";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import logout from "../../redux/slice/authSlice";
+import { logout } from "../../redux/slice/authSlice";
 
 export const MainHeader = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const role = useSelector((state: any) => state.auth.role);
 
@@ -29,13 +28,13 @@ export const MainHeader = () => {
       <nav className="flex items-center justify-end ml-auto mr-10 relative">
         <div className="relative   inline-block text-left">
           <button
-            onClick={() => setDropdownOpen(!dropdownOpen)}
+            onClick={handleLogout}
             className="bg-blue-700 text-white px-4 py-2 font-medium capitalize rounded-full"
           >
-            {role}
+            {role}, Logout
           </button>
 
-          {dropdownOpen && (
+          {/* {dropdownOpen && (
             <div className="absolute right-0 mt-2 w-40 bg-white rounded-md shadow-lg z-10">
               <button
                 onClick={handleLogout}
@@ -44,7 +43,7 @@ export const MainHeader = () => {
                 Logout
               </button>
             </div>
-          )}
+          )} */}
         </div>
       </nav>
     </div>
